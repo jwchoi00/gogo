@@ -50,6 +50,18 @@ def generate_launch_description():
         arguments=["joint_broad"],
     )
 
+    diffbot_publisher = Node(
+        package="py_pubsub",
+        executable="diffbot_publisher",
+        arguments=[]
+    )
+
+    diffbot_subscriber = Node(
+        package="py_pubsub",
+        executable="diffbot_subscriber",
+        arguments=[]
+    )
+
 
 
     # Launch them all!
@@ -58,5 +70,7 @@ def generate_launch_description():
         gazebo,
         spawn_entity,
         diff_drive_spawner,
-        joint_broad_spawner
+        joint_broad_spawner,
+        diffbot_publisher,
+        diffbot_subscriber
     ])
