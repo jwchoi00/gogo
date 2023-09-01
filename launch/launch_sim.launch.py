@@ -51,13 +51,13 @@ def generate_launch_description():
     )
 
     diffbot_publisher = Node(
-        package="py_pubsub",
+        package="diffbot_control_node",
         executable="diffbot_publisher",
         arguments=[]
     )
 
     diffbot_subscriber = Node(
-        package="py_pubsub",
+        package="diffbot_control_node",
         executable="diffbot_subscriber",
         arguments=[]
     )
